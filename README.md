@@ -3,7 +3,7 @@
 ## Problem
 Kubernetes custom resource definitions lacking schema validation in IDE
 
-![Service Monitor pre validation schema](unknown-resource.png)
+![Service Monitor pre validation schema](assets/unknown-resource.png)
 
 ## Solution
 1. Find the CRD definition:
@@ -11,16 +11,16 @@ Kubernetes custom resource definitions lacking schema validation in IDE
 2. Navigate to Settings --> Languages & Frameworks --> Kubernetes
 3. Add link to CRD via URL:
 
-![Adding CRD URL](settings.png)
+![Adding CRD URL](assets/settings.png)
 
 ## Validation
 1. No longer is the resource unknown. In fact, it is now identifying an issue in the Service Monitor definition
 
-![Service Monitor post validation schema -- bad](known-resource-bad.png)
+![Service Monitor post validation schema -- bad](assets/known-resource-bad.png)
 
 2. Upon fixing the identified issue in the definition, we can see a valid Service Monitor definition
 
-![Service Monitor post validation schema -- good](known-resource-good.png)
+![Service Monitor post validation schema -- good](assets/known-resource-good.png)
 
 ## Bonus
 Command line schema validation (linting) may be important, especially in an automated CI process. I recommend leveraging
